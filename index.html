@@ -1,0 +1,258 @@
+<html>
+    <head>
+        <title>Recardo Cleaning</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> <!-- Link to firebase library -->
+        <script src="OrderSiteThirdLayer.js"></script>      
+        <script src="OrderSiteSecondLayer.js"></script>      
+        <link rel="stylesheet" href="RecardoCleaning.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <!-- top manu -->
+            <h3 id="manuName">ריקרדו ניקיון</h3>
+            <a href="#homeDiv">דף בית</a>
+            <a href="#servicesDiv">השירותים שלנו</a>
+            <a href="#aboutDiv">עלינו</a>
+            <a href="#formDiv">צור קשר</a>
+        </div>
+        <div id="homeDiv">
+            <!-- home -->
+            <div id="homeText">
+                תתקשרו עכשיו</br>
+                ANY JOB, WE WILL CLEAN</br>
+                052-8572057
+            </div>
+            <div id="homeButtonDiv">
+                <button type="button" class="homeButton" onclick="scrollToForm()">קבלו הצעת מחיר</button>
+            </div>
+        </div>
+
+        <div id="servicesDiv">
+            <!-- services -->
+            <h1>השירותים שלנו</h1>
+
+            <ul>
+            <table>
+
+                <tr> 
+                    <td class="servicesTable"><li>
+                        ניקיון מעלית
+                    </li></td>
+                    <td class="servicesTable"><li>
+                        ניקיון לובי
+                    </li></td>
+                    <td class="servicesTable"><li>
+                        ניקיון גינות
+                    </li></td>
+                </tr>
+
+                <tr>
+                    <td class="servicesTable"><li>
+                        ניקיון חדרי פח
+                    </li></td>
+                    <td class="servicesTable"><li>
+                        ניקיון חניה
+                    </li></td>
+                    <td class="servicesTable"><li>
+                        ניקיונות מיוחדים בפסח וראש השנה
+                    </li></td>
+                </tr>
+
+                <tr>
+                    <td class="servicesTable"><li>
+                        ניקיון חדרי מדרוגות ואזור </br>מחייה משותף בקומות
+                    </li></td>
+                    <td class="servicesTable"><li>
+                        ניתן להוסיף עוד ניקיונות </br>במעמד החוזה
+                    </li></td>
+                    <td class="servicesTable"><li>
+                        שימוש במצלמות על עובדי הניקיון</br> לטובת פיקוח ומעקב
+                    </li></td>
+                </tr>
+            </table> </ul>
+        </div>
+
+        <div id="aboutDiv">
+            <!-- about -->
+            <div>
+                <!-- who we are -->
+                <div id="aboutTitle">
+                    <h1>מי אנחנו</h1>
+                </div>
+                <div id="aboutText">
+                    <p>
+                        "ריקרדו ניקיון" היא חברה שנפתחה בשנת 2012 ומספקת שירותי ניקיון לבניינים בעכו ובסביבתה.
+                        אנו, בחברה, משתמשים במכונות שטיפה, שואבי אבק לניקוי מסילות (במעלית ודלתות הזזה), רובוטים לניקוי חלונות ועוד.
+                        עם מעל עשור ניסיון, ריקרדו (הבעלים) מנקה ומנהל עובדי ניקיון נוספים על מנת לאפשר לכם סביבת מחייה נקייה ומבושמת.
+                        העבודה נעשית עם אחריון ואמון בין הלקוח בינינו.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <!-- photos -->
+                <div id="photoTitle">
+                    <h1>גלריית תמונות</h1>
+                </div>
+                <!-- תמונות רצות -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 1</div>
+                      <img src="photos/photo1.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 2</div>
+                      <img src="photos/photo2.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="photos/photo3.jpg" style="width:100%">
+                    </div>  
+                  <!-- Start the animation -->  
+                  <script>
+                    var slideIndex = 0;
+                    showSlides();
+                  </script>
+            </div>
+        </div>
+
+        <div id="formDiv">           
+                <table>
+                    <tr>
+                        <td> <h2>Call US</h2></td>
+                        <td> <h2>Email US</h2></td>
+                        <td><h2>Areas Covers</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h3>052-8572057</h3></td>
+                        <td><h3>pekoricardo@gmail.com</h3></td>
+                        <td>
+                            <Table id="cityTable">
+                                <tr>
+                                    <td id="cityTd"><h3>עכו</h3></td>
+                                    <td id="cityTd"><h3>נהריה</h3></td>
+                                </tr>
+                            </Table>
+                        </td>
+                    </tr>
+                </table>
+
+            <!-- form to enter -->
+            <form id="formId">
+                <div id="buildingDiv">
+                <h1 id="SellTitle">קבלו הצעת מחיר משוערת</h1>                                                   
+                מספר קומות: <input type="text" id="floorNum" name="floorNum"> </br>
+                גודל קומה:  
+                <select id="floorSize" name="floorSize">
+                    <option value="Empty"> -- בחר אופציה -- </option>
+                    <option value="Medium">רגיל</option>
+                    <option value="Large">גדול</option>
+                </select></br></br>  
+
+                מספר לובים: <input type="text" id="lobbyNum" name="lobbyNum"> </br>
+                גודל לובי: 
+                <select id="lobbySize" name="lobbySize">
+                    <option value="Empty"> -- בחר אופציה -- </option>
+                    <option value="Medium">רגיל</option>
+                    <option value="Large">גדול</option>
+                </select></br></br>
+
+                כמות חלונות: 
+                <select id="windowsNum" name="windowsNum">
+                    <option value="Empty"> -- בחר אופציה -- </option>
+                    <option value="Medium">קצת</option>
+                    <option value="Large">הרבה</option>
+                </select></br></br>
+
+
+                האם יש חניון?:
+                <select id="parkingLot"  onchange="YesShowNoHide(this,'hideParking','row1')" name="parkingLot">
+                    <option value="No">לא</option>
+                    <option value="Yes">כן</option>
+                </select> </br>
+                <div id="hideParking">
+                כמות חניונים:        <!-- Show only if the select on yes -->
+                <input type="text" id="parkingNum" name="parkingNum"></br></br>
+                </div>
+                <p id="row1"></p>
+
+                האם יש חדר אשפה?:
+                <select id="garbageRoom" onchange="YesShowNoHide(this,'hideGarbage','row2')" name="garbageRoom">
+                    <option value="No">לא</option>
+                    <option value="Yes">כן</option>
+                </select> </br>
+                <div id="hideGarbage">
+                כמות חדרי אשפה:       <!-- Show only if the select on yes -->
+                <input type="text" id="garbageNum" name="garbageNum"></br></br>
+                </div>
+                <p id="row2"></p>
+                
+                האם יש גינה?:
+                <select id="garden" onchange="YesShowNoHide(this,'hideGarden','row3')" name="garden">
+                    <option value="No">לא</option>
+                    <option value="Yes">כן</option>
+                </select> </br>
+                <div id="hideGarden">
+                כמות גינות:              <!-- Show only if the select on yes -->
+                <input type="text" id="gardenNum" name="gardenNum"></br></br>
+                </div>
+                <p id="row3"></p>
+                כמות מעליות:
+                <input type="text" id="elevatorNum" name="elevatorNum"></br></br>
+                
+                ניקוי מדרגות?:
+                <select id="stairsClean" name="stairsClean">
+                    <option value="No">לא</option>
+                    <option value="Yes">כן</option>
+                </select> </br></br>
+
+                תדירות ניקיון: </br>
+                <input type="radio" id="onceAWeek" name="cleaningFrequency" value="OnceAWeek"> פעם בשבוע</br>
+                <input type="radio" id="twiceAWeek" name="cleaningFrequency" value="TwiceAWeek"> פעמיים בשבוע </br>
+                <input type="radio" id="ThreeAWeek" name="cleaningFrequency" value="ThreeAWeek"> שלוש פעמים בשבוע</br></br>
+                <button type="button" class="centerAlian, homeButton" onclick="write_price()">קבל הצעת מחיר משוערת</button>              
+                <p style="visibility: visible;" id="priceResult" class="centerAlian"></p></p>
+                </div>
+
+                <div id="clientDiv">
+                    <div id="clientDetails">
+                        <h1 class="centerAlian">פרטי לקוח</h1>
+                        עיר: 
+                        <select id="city" name="city">
+                            <option value="Akko">עכו</option>       
+                            <option value="Nahariya">נהריה</option>
+                        </select></br></br>
+            
+                        רחוב: <input type="text" id="street" name="street"> </br></br>
+                        מספר בניין: <input type="text" id="buildingNum" name="buildingNum"> </br></br>
+                    </div>
+
+                    <div id="person1Div">
+                        <h3 class="centerAlian">איש קשר 1</h3>
+                        שם פרטי: <input type="text" id="fName1" name="fName1"></br></br>
+                        שם משפחה: <input type="text" id="lName1" name="lName1"></br></br>
+                        מספר טלפון: <input type="text" id="phone1" name="phone1"></br></br>
+                        Email: <input type="text" id="email1" name="email1"></br></br>
+                    </div>
+                    <div id="person2Div">
+                        <h3 class="centerAlian">איש קשר 2</h3>
+                        שם פרטי: <input type="text" id="fName2" name="fName2"></br></br>
+                        שם משפחה: <input type="text" id="lName2" name="lName2"></br></br>
+                        מספר טלפון: <input type="text" id="phone2" name="phone2"></br></br>
+                        Email: <input type="text" id="email2" name="email2"></br></br>
+                    </div>
+                </div>
+                </br>
+                <div id="specialRequestDiv">
+                    <h2 class="centerAlian">בקשות מיוחדות:</h2><textarea id="specialRequest" name="specialRequest" placeholder="הכנס את הבקשה שלך"></textarea> </br></br>
+                </div>
+                
+                <button type="button" class="homeButton" onclick="ordernow()">שליחת טופס</button>                         
+                <button type="button" class="homeButton" onclick="cleanForm()">ניקוי טופס</button>                  
+            </form>
+        </div>
+    </body>
+</html>

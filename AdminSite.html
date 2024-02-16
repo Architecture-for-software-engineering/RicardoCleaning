@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Admin Page</title>
+        <link rel="stylesheet" href="AdminSite.css">
+        <!--Firebase Libraries-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> <!-- Link to firebase library -->
+        <!--JS files--> 
+       <script src="AdminSiteSecondLayer.js"></script>
+       <script src="AdminSiteThirdLayer.js"></script>
+    </head>
+    <body onload="ReadData()" id="mainbody">
+        <div  >
+            <table id="list"  border="1">
+                <thead id="top" >
+                    <th>'מס</th>
+                    <th>איש קשר 1</th>
+                    <th>איש קשר 2</th>
+                    <th>כתובת</th>
+                    <th>פרטי בניין</th>
+                    <th>תדירות ניקיון</th>
+                    <th>בקשות מיוחדות</th>
+                    <th>מחיר</th>
+                    <th>סטטוס</th>
+                    <th>פעולות</th>
+                </thead>
+                <tfoot id="ClintTable" >
+                  <!--Clints will be ADD via JS code-->
+
+                </tfoot>
+            </table>
+        </div>
+         <!-- Overlay -->
+          <div class="overlay" id="overlay">
+            <!-- Modal -->
+              <div class="modal">
+                <!-- Close button -->
+               <span class="close-btn" onclick="togglePopup()">&times;</span>
+                <!-- Modal body-->
+                <div class="modal-body">
+                  <h1 id="UpdateClintHead"> עדכון לקוח</h1>
+                  <label>שם פרטי 1</label>
+                  <input type="text" id="Contact1ChangeFirstName"> <br>
+                  <label>שם משפחה 1</label>
+                  <input type="text" id="Contact1LastNameChange"> </br>
+                  <label>טלפון 1</label>
+                  <input type="text" id="Contact1PhoneChange"> </br>
+                  <label>מייל 1</label>
+                  <input type="text" id="Contact1MailChange"> </br>
+                  <label>שם פרטי 2</label>
+                  <input type="text" id="Contact2ChangeFirstName"> </br>
+                  <label>שם משפחה 2</label>
+                  <input type="text" id="Contact2LastNameChange"> </br>
+                  <label>טלפון 2</label>
+                  <input type="text" id="Contact2PhoneChange"> </br>
+                  <label>מייל 2</label>
+                  <input type="text" id="Contact2MailChange"> </br>
+                  <label>עיר</label>
+                  <input type="text" id="CityChange"> </br>
+                  <label>רחוב</label>
+                  <input type="text" id="StreetChange"> </br>
+                  <label>מספר בית</label>
+                  <input type="text" id="HouseNumChange"> </br>
+                  <label>מספר קומות</label>
+                  <input type="text" id="FloorNumChange"> </br>
+                  <label>גודל קומה</label>
+                  <input type="text" id="FloorSizeChange"> </br>
+                  <label>מספר לובים</label>
+                  <input type="text" id="LobbyNumChange"> </br>
+                  <label>גודל לובי</label>
+                  <input type="text" id="LobbySizeChange"> </br>
+                  <label>מספר חלונות</label>
+                  <input type="text" id="WindowsNumChange"> </br>
+                  <label>לנקות חניונים</label>
+                  <input type="text" id="ParkingLotChange"> </br>
+                  <label>מספר חניונים</label>
+                  <input type="text" id="ParkingNumChange"> </br>
+                  <label>לקנות חדרי אשפה</label>
+                  <input type="text" id="GarbageRoomChange"> </br>
+                  <label>מספר חדרי אשפה</label>
+                  <input type="text" id="GarbageNumChange"> </br>
+                  <label>לקנות גינה</label>
+                  <input type="text" id="GardenChange"> </br>
+                  <label>מספר גינות</label>
+                  <input type="text" id="GardenNumChange"> </br>
+                  <label>כמות מעליות</label>
+                  <input type="text" id="ElevatorChange"> </br>
+                  <label>לנקות מדרגות</label>
+                  <input type="text" id="StairsChange"> </br>
+                  <label>תדירות ניקיון</label>
+                  <input type="text" id="CleaningChange"> </br>
+                  <label>בקשות מיוחדות</label>
+                  <input type="text" id="SpecialRequestChange"> </br>
+                  <label>מחיר</label>
+                  <input type="text" id="PriceChange"> </br>
+                  <label>סטטוס</label>
+                  <input type="text" id="StatusChange"> </br>
+                  <label id="keytext">מפתח</label>
+                  <input type="text" id="Key"> </br>
+                </div>
+                <!-- update and edit buttons -->
+                 <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="RemoveClint()" id="DeleteClientButton">מחיקת לקוח</button>
+                <button type="button" class="btn btn-primary" onclick="UpdateClint()" id="SaveChangesButton">שמירת שינויים</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
