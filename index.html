@@ -3,10 +3,14 @@
         <title>Ricardo Cleaning</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> <!-- Link to firebase library -->
         <script src="OrderSiteThirdLayer.js"></script>      
-        <script src="OrderSiteSecondLayer.js"></script>      
+        <script src="OrderSiteSecondLayer.js"></script>    
+        
+        <!---------------------------------Start----------------------------------->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <!----------------------------------End------------------------------------>
         <link rel="stylesheet" href="RecardoCleaning.css">
     </head>
-    <body>
+    <body onload="disableButton()">
         <div class="navbar">
             <!-- top manu -->
             <h3 id="manuName">ריקרדו ניקיון</h3>
@@ -141,7 +145,7 @@
                 </table>
 
             <!-- form to enter -->
-            <form id="formId">
+            <form id="formId" method="POST">
                 <div id="buildingDiv">
                 <h1 id="SellTitle">קבלו הצעת מחיר משוערת</h1>                                                   
                 מספר קומות: <input type="text" id="floorNum" name="floorNum"> </br>
@@ -250,9 +254,13 @@
                     <h2 class="centerAlian">בקשות מיוחדות:</h2><textarea id="specialRequest" name="specialRequest" placeholder="הכנס את הבקשה שלך"></textarea> </br></br>
                 </div>
                 
-                <button type="button" class="homeButton" onclick="ordernow()">שליחת טופס</button>                         
-                <button type="button" class="homeButton" onclick="cleanForm()">ניקוי טופס</button>                  
+                
+                
+                <button id="submitButton" type="button" class="homeButton" disabled onclick="ordernow()">שליחת טופס</button>     
+                
+                <button type="button" class="homeButton" onclick="cleanForm()">ניקוי טופס</button>                 
             </form>
+            <div id="notRobot" class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lf-NnwpAAAAANuW5UFC1QpfOOKsUiJmal0c9wN9"></div>
         </div>
     </body>
 </html>
