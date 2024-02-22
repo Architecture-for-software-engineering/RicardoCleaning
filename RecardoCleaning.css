@@ -306,6 +306,7 @@ form {
     width: 26%;
     border: 3px solid rgb(49, 47, 47);
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -334,4 +335,11 @@ p {
 #row3 ,#row2 ,#row1 
 {
     display: block;
+}
+
+#notRobot 
+{
+    background-color: steelblue;
+    padding-right: 42%;
+    padding-bottom: 30px;
 }
