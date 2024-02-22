@@ -457,3 +457,16 @@ function write_price(){
   document.getElementById('priceResult').innerHTML = msg;
 
 }
+
+//<!---------------------------------Start----------------------------------->
+//function that enable the submit button after the capcha has been completed
+function recaptchaCallback() {
+  document.getElementById("submitButton").removeAttribute('disabled');
+};
+
+//function that disable the submit button until the capcha has been completed
+function disableButton() {
+  document.getElementById("submitButton").setAttribute('disabled', '');
+} 
+
+//<!----------------------------------End------------------------------------>
