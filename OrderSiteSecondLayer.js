@@ -482,6 +482,7 @@ function openLoginModal()
 /*function to close the window of the login */
 function closeLoginModal() 
 {
+  document.getElementById("loginForm").reset();
   document.getElementById("loginModal").style.display = "none";
 }
 /*function for the login button if the user puts the correct password and username we are redirected to the admin site 
@@ -489,8 +490,8 @@ the event.preventDefault is to stop the refresh of the site when we put the user
 function submitLoginForm(event) 
 {
   event.preventDefault();
-  var username = document.getElementById("username").value.trim();
-  var password = document.getElementById("password").value.trim();
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
     if (username === "Admin" && password === "Admin") 
     {
       window.open("AdminSite.html", "_blank");
@@ -499,4 +500,6 @@ function submitLoginForm(event)
     {
         alert("Incorrect username or password.");
     }
+    document.getElementById("loginForm").reset();
+    closeModal();
 }
