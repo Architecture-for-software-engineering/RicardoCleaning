@@ -1,13 +1,11 @@
-<html> 
+<html>
     <head>
         <title>Ricardo Cleaning</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> <!-- Link to firebase library -->
         <script src="OrderSiteThirdLayer.js"></script>      
         <script src="OrderSiteSecondLayer.js"></script>    
-        
-        <!---------------------------------Start----------------------------------->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <!----------------------------------End------------------------------------>
+
         <link rel="stylesheet" href="RecardoCleaning.css">
     </head>
     <body onload="disableButton()">
@@ -18,6 +16,22 @@
             <a href="#servicesDiv">השירותים שלנו</a>
             <a href="#aboutDiv">עלינו</a>
             <a href="#formDiv">צור קשר</a>
+            <button type="button" class="log_inButton" onclick="openLoginModal()">חיבור מנהל</button>
+        </div>
+        <!-- The Modal -->
+        <div id="loginModal" class="Loginmodal">
+            <!-- Modal content -->
+            <div class="Loginmodal-content">
+            <span class="close" onclick="closeLoginModal()">X</span>
+            <h2 id="connecth">התחברות</h2>
+            <form id="loginForm" onsubmit="submitLoginForm(event)">
+                <label for="username">שם משתמש:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">סיסמה:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">התחבר</button>
+            </form>
+            </div>
         </div>
         <div id="homeDiv">
             <!-- home -->
@@ -27,10 +41,24 @@
                 052-8572057
             </div>
             <div id="homeButtonDiv">
-                <button type="button" class="homeButton" onclick="scrollToForm()">קבלו הצעת מחיר</button>
+                <button type="button" class="yellowButton" onclick="scrollToForm()">קבלו הצעת מחיר</button>
+            </div>
+            <div id="ReviewButtonDiv">
+                <button type="button" class="yellowButton" onclick="togglePopupForm()">השאר ביקורת</button>
             </div>
         </div>
-
+        <!-- Overlay Form -->
+        <div class="overlay" id="overlayForm">
+        <!-- Modal -->
+          <div class="modal">
+            <!-- Close button -->
+           <span class="close-btn" onclick="togglePopupForm()">&times;</span>
+            <!-- Modal body-->
+            <div class="modal-body">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefS3EVApD-PLOz8Aj48St7cAASs2qHFIbe_uDuWhbfH0QUQw/viewform?embedded=true" width="640" height="961" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            </div>
+        </div>
         <div id="servicesDiv">
             <!-- services -->
             <h1>השירותים שלנו</h1>
@@ -217,7 +245,7 @@
                 <input type="radio" id="onceAWeek" name="cleaningFrequency" value="OnceAWeek"> פעם בשבוע</br>
                 <input type="radio" id="twiceAWeek" name="cleaningFrequency" value="TwiceAWeek"> פעמיים בשבוע </br>
                 <input type="radio" id="ThreeAWeek" name="cleaningFrequency" value="ThreeAWeek"> שלוש פעמים בשבוע</br></br>
-                <button type="button" class="centerAlian, homeButton" onclick="write_price()">קבל הצעת מחיר משוערת</button>              
+                <button type="button" class="centerAlian, yellowButton" onclick="write_price()">קבל הצעת מחיר משוערת</button>              
                 <p style="visibility: visible;" id="priceResult" class="centerAlian"></p></p>
                 </div>
 
@@ -256,9 +284,9 @@
                 
                 
                 
-                <button id="submitButton" type="button" class="homeButton" disabled onclick="ordernow()">שליחת טופס</button>     
+                <button id="submitButton" type="button" class="yellowButton" disabled onclick="ordernow()">שליחת טופס</button>     
                 
-                <button type="button" class="homeButton" onclick="cleanForm()">ניקוי טופס</button>                 
+                <button type="button" class="yellowButton" onclick="cleanForm()">ניקוי טופס</button>                 
             </form>
             <div id="notRobot" class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lf-NnwpAAAAANuW5UFC1QpfOOKsUiJmal0c9wN9"></div>
         </div>

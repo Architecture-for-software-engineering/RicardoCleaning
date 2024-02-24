@@ -458,7 +458,6 @@ function write_price(){
 
 }
 
-//<!---------------------------------Start----------------------------------->
 //function that enable the submit button after the capcha has been completed
 function recaptchaCallback() {
   document.getElementById("submitButton").removeAttribute('disabled');
@@ -469,4 +468,35 @@ function disableButton() {
   document.getElementById("submitButton").setAttribute('disabled', '');
 } 
 
-//<!----------------------------------End------------------------------------>
+// Function to toggle the visibility of the popup menu
+function togglePopupForm() {
+  var overlay = document.getElementById("overlayForm");
+  overlay.style.display = (overlay.style.display === "flex") ? "none" : "flex";
+}
+//-----------------------------------------------------------------------------------------------------
+/*function to open the window of the login */
+function openLoginModal() 
+{
+  document.getElementById("loginModal").style.display = "block";
+}
+/*function to close the window of the login */
+function closeLoginModal() 
+{
+  document.getElementById("loginModal").style.display = "none";
+}
+/*function for the login button if the user puts the correct password and username we are redirected to the admin site 
+the event.preventDefault is to stop the refresh of the site when we put the username and the password*/
+function submitLoginForm(event) 
+{
+  event.preventDefault();
+  var username = document.getElementById("username").value.trim();
+  var password = document.getElementById("password").value.trim();
+    if (username === "Admin" && password === "Admin") 
+    {
+      window.open("AdminSite.html", "_blank");
+    } 
+    else 
+    {
+        alert("Incorrect username or password.");
+    }
+}
