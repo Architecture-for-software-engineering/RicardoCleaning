@@ -501,5 +501,5 @@ function submitLoginForm(event)
         alert("Incorrect username or password.");
     }
     document.getElementById("loginForm").reset();
-    closeModal();
+    closeLoginModal();
 }
