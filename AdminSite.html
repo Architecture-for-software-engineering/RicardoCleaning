@@ -36,8 +36,8 @@
                 <!-- Close button -->
                <span class="close-btn" onclick="togglePopup()">&times;</span>
                 <!-- Modal body-->
+                <h1 id="UpdateClintHead"> עדכון לקוח</h1>
                 <div class="modal-body">
-                  <h1 id="UpdateClintHead"> עדכון לקוח</h1>
                   <label>שם פרטי 1</label>
                   <input type="text" id="Contact1ChangeFirstName"> <br>
                   <label>שם משפחה 1</label>
@@ -98,8 +98,11 @@
                   <input type="text" id="Key"> </br>
                 </div>
                 <!-- update and edit buttons -->
-                 <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="RemoveClint()" id="DeleteClientButton">מחיקת לקוח</button>
-                <button type="button" class="btn btn-primary" onclick="UpdateClint()" id="SaveChangesButton">שמירת שינויים</button>
+                <div>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="RemoveClint()" id="DeleteClientButton">מחיקת לקוח</button>
+                  <button type="button" class="btn btn-primary" onclick="UpdateClint()" id="SaveChangesButton">שמירת שינויים</button>
+                </div>
+               
               </div>
             </div>
           </div>

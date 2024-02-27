@@ -42,7 +42,7 @@ function AddItemToTable(Address,BuildingData,Contact1,Contact2,specialRequest,Cl
   td6.innerHTML =   specialRequest;
   td7.innerHTML = EstemaitedPrice + " ש\"ח";
   td8.innerHTML = "סטטוס: " + Status;
-  td9.innerHTML ='</br></br></br><button type="button" id="updatebutton" onclick="FillTboxses('+clintindx+')">עדכון/מחיקת לקוח</button></br></br></br></br>';  
+  td9.innerHTML ='</br></br></br><button type="button" class="yellowButton" onclick="FillTboxses('+clintindx+')">עדכון/מחיקת לקוח</button></br></br></br></br>';  
   // Adding all data in to the row
   trow.appendChild(td0);
   trow.appendChild(td1);

@@ -21,38 +21,63 @@
     text-align: center;
 }
 
-
+.yellowButton {
+    font-size:20px;
+    font-family:Arial;
+    width:200px;
+    height:50px;
+    border-width:1px;
+    color:#333333;
+    border-color:#ffaa22;
+    font-weight:bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    text-shadow: 0px 1px 0px #ffee66;
+    background:linear-gradient(#ffec64, #ffab23);
+    cursor: pointer;
+}
 
 #ClintUpdateBody /*clints popup menu body look*/
 {
-    width: 100%;
-    height: auto;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 0 5px #ddd;
-    direction: rtl;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    
+    font-size:20px;
+    font-family:Arial;
+    width:100%;
+    height: 100%;
+    border-width:1px;
+    color: black;
+    border-color: gray;
+    font-weight: bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow: 0px 1px 0px 0px black;
+    text-shadow: 0px 1px 0px white ;
+    background: white;
+    text-align: center;
+
 }
 #list /* list look*/
 {
-    width: 100%;
-    height: auto;
-    background-color:#f2daf3;
-    border: 1px solid #000000;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 0 5px #ddd;
-    direction: rtl;
+    font-size:20px;
+    font-family:Arial;
+    width:100%;
+    height: 100%;
+    border-width:1px;
+    color: black;
+    border-color: gray;
+    font-weight: bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow: 0px 1px 0px 0px black;
+    text-shadow: 0px 1px 0px white ;
+    background: white;
     text-align: center;
-    font-family: Arial, sans-serif;
-    border-style: solid;
-    border-collapse: collapse; /* make the table borders collapse to each other */
-    width: 100%;
 }
 #key /*hide the data base key from the user*/
 {
@@ -66,8 +91,21 @@
 {
     position: sticky; 
     top: 0cm; 
-    background-color: #eee; 
-    border: 1px solid #000000;
+    font-size:20px;
+    font-family: Arial;
+    height:30px;
+    border-width:1px;
+    color: White;
+    border-color: gray;
+    font-weight: bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow: 0px 1px 0px 0px black;
+    text-shadow: 0px 1px 0px white ;
+    background:linear-gradient(rgb(0, 0, 0), rgb(122, 122, 122) );
+    
     
 }
 
@@ -114,19 +152,7 @@
     list-style: none;
     text-align: center;
 }
-#updatebutton
-{
-    width: 100%;
-    height: 40px;
-    background-color: #f3e3e3;
-    border-bottom: 1px black;
-    margin-bottom: 10px;
-    padding: 0;
-    list-style: none;
-    text-align: center;
 
-
-}
 /* Styles for the overlay */
 .overlay {
     display: none;
@@ -142,11 +168,11 @@
 
 /* Styles for the modal */
 .modal {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
-    height: 70%; /* Adjust height as needed */
-    width: 25%; /* Adjust width as needed */
+    height: 600px; /* Adjust height as needed */
+    width: 415px; /* Adjust width as needed */
 }
 
 /* Styles for the close button */
@@ -159,19 +185,21 @@
 }
 
 #UpdateClintHead {
-    width: 100%;
-    height: 40px;
+    width: 400px;
+    height: 20px;
     background-color: #eee;
     border-bottom: 1px solid #000000;
     margin-bottom: 10px;
     padding: 0;
     list-style: none;
     text-align: center;
+    font-size:20px;
+    font-family:Arial;
 }
 
 .modal-body {
-    width: 99%;
-    height: 90%;
+    width: 400px;
+    height: 450px;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 10px;
@@ -182,6 +210,8 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    font-size:20px;
+    font-family:Arial;
 }
 
 /* Styles for the buttons */
@@ -196,12 +226,39 @@
 }
 
 #DeleteClientButton {
-    background-color: #dc3545; /* Adjust color as needed */
+    font-size:20px;
+    font-family:Arial;
+    width:205px;
+    height:30px;
+    border-width:1px;
+    color: White;
+    border-color: gray;
+    font-weight: bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow: 0px 1px 0px 0px black;
+    text-shadow: 0px 1px 0px white ;
+    background:linear-gradient(red, rgb(118, 2, 2) );
     cursor: pointer;
 }
 
 #SaveChangesButton {
-    background-color: #007bff; /* Adjust color as needed */
-    color: #fff;
+    font-size:20px;
+    font-family:Arial;
+    width:205px;
+    height:30px;
+    border-width:1px;
+    color: White;
+    border-color: gray;
+    font-weight: bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow: 0px 1px 0px 0px black;
+    text-shadow: 0px 1px 0px white ;
+    background:linear-gradient(blue, rgb(5, 5, 102));
     cursor: pointer;
 }
