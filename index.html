@@ -46,13 +46,14 @@
             <div id="ReviewButtonDiv">
                 <button type="button" class="yellowButton" onclick="togglePopupForm()">השאר ביקורת</button>
             </div>
+        <!-- Google Form SAAS -->
         </div>
         <!-- Overlay Form -->
         <div class="overlay" id="overlayForm">
         <!-- Modal -->
-          <div class="modal">
+            <div class="modal">
             <!-- Close button -->
-           <span class="close-btn" onclick="togglePopupForm()">&times;</span>
+            <span class="close-btn" onclick="togglePopupForm()">&times;</span>
             <!-- Modal body-->
             <div class="modal-body">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefS3EVApD-PLOz8Aj48St7cAASs2qHFIbe_uDuWhbfH0QUQw/viewform?embedded=true" width="640" height="961" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
@@ -105,7 +106,7 @@
         </div>
 
         <div id="aboutDiv">
-            <!-- about -->
+            <!-- about us -->
             <div>
                 <!-- who we are -->
                 <div id="aboutTitle">
@@ -121,33 +122,32 @@
                 </div>
             </div>
             <div>
-                <!-- photos -->
+                <!-- photos gallery  -->
                 <div id="photoTitle">
                     <h1>גלריית תמונות</h1>
                 </div>
-                <!-- תמונות רצות -->
                 <div class="slideshow-container">
 
                     <!-- Full-width images with number and caption text -->
                     <div class="mySlides fade">
-                      <div class="numbertext">3 / 1</div>
-                      <img src="photos/photo1.jpg" style="width:100%">
+                        <div class="numbertext">3 / 1</div>
+                        <img src="photos/photo1.jpg" style="width:100%">
                     </div>
-                  
+                    
                     <div class="mySlides fade">
-                      <div class="numbertext">3 / 2</div>
-                      <img src="photos/photo2.jpg" style="width:100%">
+                        <div class="numbertext">3 / 2</div>
+                        <img src="photos/photo2.jpg" style="width:100%">
                     </div>
-                  
+                    
                     <div class="mySlides fade">
-                      <div class="numbertext">3 / 3</div>
-                      <img src="photos/photo3.jpg" style="width:100%">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="photos/photo3.jpg" style="width:100%">
                     </div>  
-                  <!-- Start the animation -->  
-                  <script>
+                    <!-- Start the animation -->  
+                    <script>
                     var slideIndex = 0;
                     showSlides();
-                  </script>
+                    </script>
             </div>
         </div>
 
@@ -288,7 +288,23 @@
                 
                 <button type="button" class="yellowButton" onclick="cleanForm()">ניקוי טופס</button>                 
             </form>
+            
+            <!-- reCapcha SAAS -->
             <div id="notRobot" class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lf-NnwpAAAAANuW5UFC1QpfOOKsUiJmal0c9wN9"></div>
+            <!--  Hosteges counter SAAS -->
+            <div id="bthn" lang="he"></div><script>
+                (function () {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://bringthemhomenow.net/1.0.8/hostages-ticker.js";
+                    script.setAttribute(
+                        "integrity",
+                        "sha384-jQVW0E+wZK5Rv1fyN+b89m7cYY8txH4s3uShzHf1T51hdBTPo7yKL6Yizgr+Gp8C"
+                    );
+                    script.setAttribute("crossorigin", "anonymous");
+                    document.getElementsByTagName("head")[0].appendChild(script);
+                    })();
+                </script>
         </div>
     </body>
 </html>
