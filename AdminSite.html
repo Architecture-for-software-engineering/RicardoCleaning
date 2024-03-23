@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html> 
     <head> 
         <title>Admin Page</title>
@@ -5,12 +6,12 @@
         <!--Firebase Libraries-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> <!-- Link to firebase library -->
         <!--JS files--> 
-       <script src="AdminSiteSecondLayer.js"></script>
-       <script src="AdminSiteThirdLayer.js"></script>
+        <script src="MyFirebase.js"></script>
+        <script src="AdminSiteSecondLayer.js"></script>
     </head>
-    <body onload="ReadData()" id="mainbody">
+    <body onload="myReadData()" id="mainbody">
         <div  >
-            <table id="list"  border="1">
+            <table id="list" border="1">
                 <thead id="top" >
                     <th>'מס</th>
                     <th>איש קשר 1</th>
@@ -23,8 +24,8 @@
                     <th>סטטוס</th>
                     <th>פעולות</th>
                 </thead>
-                <tfoot id="ClintTable" >
-                  <!--Clints will be ADD via JS code-->
+                <tfoot id="ClientTable" >
+                  <!--Clients will be ADD via JS code-->
 
                 </tfoot>
             </table>
@@ -36,7 +37,7 @@
                 <!-- Close button -->
                <span class="close-btn" onclick="togglePopup()">&times;</span>
                 <!-- Modal body-->
-                <h1 id="UpdateClintHead"> עדכון לקוח</h1>
+                <h1 id="UpdateClientHead"> עדכון לקוח</h1>
                 <div class="modal-body">
                   <label>שם פרטי 1</label>
                   <input type="text" id="Contact1ChangeFirstName"> <br>
@@ -99,8 +100,8 @@
                 </div>
                 <!-- update and edit buttons -->
                 <div>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="RemoveClint()" id="DeleteClientButton">מחיקת לקוח</button>
-                  <button type="button" class="btn btn-primary" onclick="UpdateClint()" id="SaveChangesButton">שמירת שינויים</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="myRemoveClient()" id="DeleteClientButton">מחיקת לקוח</button>
+                  <button type="button" class="btn btn-primary" onclick="myUpdateClient()" id="SaveChangesButton">שמירת שינויים</button>
                 </div>
                
               </div>

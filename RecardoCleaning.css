@@ -71,6 +71,11 @@ div {
     background: linear-gradient(#ffab23, #ffec64);
 }
 
+.yellowButton:disabled {
+    background: linear-gradient(#c5c48c, #9b9e7d);
+    cursor: not-allowed;
+}
+
 /* Styles for the overlay */
 .overlay {
     display: none;
@@ -398,7 +403,7 @@ p {
 
 #specialRequest {
     width: 90%;
-    height: 15%;
+    height: 150px;
 }
 
 #hideParking, #hideGarbage, #hideGarden {
