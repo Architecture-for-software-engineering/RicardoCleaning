@@ -206,7 +206,7 @@ async function checkInfo(){
 
   async function checkInputName(id,errorMessage) {
       const value = document.getElementById(id).value;
-      var abc = /^[a-zA-Z\u0590-\u05FF]+$/;
+      var abc = /^[a-zA-Z\u0590-\u05FF\s]+$/;
       if(!abc.test(value))
     {
       alertMsg += errorMessage + "\n";
